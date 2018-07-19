@@ -12,13 +12,10 @@ options.add_argument("--disable-gpu")
 options.add_argument("--headless")
 
 driver = webdriver.Chrome(chrome_options=options)
-driver.get('http://www.cnblogs.com/')
+driver.get('http://www.google.com/')
 time.sleep(5)
+print(driver.title)
 
-title = driver.title
-print(title)
-
-# Release memory
 driver.close()
 driver.quit()
 ```
