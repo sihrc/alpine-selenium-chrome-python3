@@ -13,9 +13,9 @@ RUN apk update && \
         chromium-chromedriver
         bash && \
     python3 -m ensurepip && \
-    pip3 install --upgrade pip wheel && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
+    pip3 install --upgrade pip wheel selenium && \
     rm -r /root/.cache
 
 CMD ["bash"]
