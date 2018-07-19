@@ -10,11 +10,10 @@ def main():
     options.add_argument("--headless")
 
     driver = webdriver.Chrome(chrome_options=options)
-    driver.get('http://www.cnblogs.com/')
+    driver.get('http://www.google.com/')
     time.sleep(5)
 
-    title = driver.title
-    print(title)
+    print(driver.title)
 
     driver.close()
     driver.quit()
