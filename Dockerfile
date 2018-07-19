@@ -10,7 +10,7 @@ RUN apk update && \
         libc-dev \
         libffi-dev \
         chromium \
-        chromium-chromedriver
+        chromium-chromedriver \
         bash && \
     python3 -m ensurepip && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
